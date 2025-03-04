@@ -1,0 +1,51 @@
+.no-access-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #E8E8E8;
+    color: #ccc;
+  }
+
+ .about-image {
+   flex: 1.7;
+   overflow: hidden;
+}
+
+ .about-image img {
+   max-width: 100%;
+   display: block;
+   transition: 0.5s ease;
+   border-radius: 20px;
+  }
+  
+  .no-access-container h1 {
+    font-size: 2rem;
+    color: #ff4a4a;
+    margin-bottom: 10px;
+  }
+  
+  .no-access-container p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .no-access-button {
+    padding: 10px 20px;
+    background: var(--primaryColor);
+    color: var(--whiteColor);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .no-access-button:hover {
+    background: var(--hoverColor);
+    color: var(--blackColor);
+    
+  }
+  

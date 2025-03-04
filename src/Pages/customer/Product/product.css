@@ -1,0 +1,509 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.home {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+
+.home h1 {
+  font-family: 'Great Vibes', 'cursive';
+  font-size: 150px;
+  color: white;
+  padding-top: 10%;
+}
+
+.home p {
+  color: rgb(0, 0, 0);
+}
+
+.home .container{
+  padding: 20px;
+  max-width: 90%;
+  margin: auto;
+}
+
+.home .content.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  border: 1px solid #ddd;
+  background-color: #ededed;
+  border-radius: 20px;
+}
+
+.home .box {
+  padding: 35px;
+  border-radius: 8px;
+  background-color: #ededed;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.home .box span {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: large;
+}
+
+.home .box input {
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.home .content {
+  text-align: left;
+  color: black;
+  margin-top: 7%;
+}
+
+/*------------home------------*/
+
+.mtop {
+  margin-top: 40px;
+}
+
+.left,
+.right {
+  width: 50%;
+}
+
+.right p {
+  line-height: 30px;
+  color: #a4a4a4;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+}
+
+.offer img {
+  width: 300px;
+  height: 300px;
+}
+
+.offer .right {
+  height: 100%;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0 0 20px 3px rgb(0 0 0 / 5%);
+}
+
+.offer .content h4 {
+  font-size: 20px;
+  color: #627795;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+}
+
+.offer .rate i {
+  font-size: 13px;
+  color: #CC8C18;
+  margin: 10px 10px 20px 0;
+}
+
+.offer .content h5 {
+  color: #627795;
+  margin-bottom: 10px;
+}
+
+.offer .box {
+  position: relative; /* Establishes a relative positioning context for child elements */
+  height: 100%; /* Ensures the card has consistent height */
+  display: flex;
+}
+
+.offer .box:hover {
+  transform: translateY(-10px);
+}
+
+.room-details-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.room-details {
+  background: #fff;
+  padding: 30px;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  position: relative;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.room-details-content {
+  display: flex;
+  gap: 30px;
+}
+
+.room-image {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 60%;
+}
+
+.main-image-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 580px;
+}
+
+/* Default Main Image Styling */
+.main-image {
+  cursor: zoom-in; 
+  width: 600px;
+  height: 580px;
+  border-radius: 8px;
+  opacity: 1;
+  transition: opacity 1s ease-in-out; 
+}
+
+.main-image.fade-out {
+  opacity: 0;
+}
+
+.detail-thumbnails {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto; 
+  width: 600px; 
+  scroll-behavior: smooth; 
+}
+
+.detail-thumbnails::-webkit-scrollbar {
+  height: 8px; 
+}
+
+.detail-thumbnails::-webkit-scrollbar-thumb {
+  background: #ffa600;
+  border-radius: 4px; 
+}
+
+.detail-thumbnail {
+  flex-shrink: 0; 
+}
+
+.detail-thumbnail img {
+  margin-top: 10px;
+  width: 100px;
+  height: 80px;
+  cursor: pointer;
+  object-fit: cover;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  transition: transform 0.2s ease; 
+}
+
+.detail-thumbnail img:hover {
+  transform: scale(1.1); 
+}
+
+.detail-thumbnail img.active {
+  border-color: #007bff; 
+}
+
+.carousel-button {
+  background-color: #ebebeb;
+  border: none;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  height: 350px;
+  display: block;
+  margin: 10px;
+}
+
+.carousel-button:hover {
+  background-color: #d9d9d9;
+}
+
+.carousel-button.left {
+  left: -30px;
+}
+
+.carousel-button.right {
+  right: -30px;
+}
+
+/* Full-Screen Image */
+.main-image.fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background-color: rgba(0, 0, 0, 0.9); /* Dark background */
+  cursor: zoom-out; /* Indicate it can be clicked to exit full-screen */
+  z-index: 1000;
+}
+
+.rating-stars {
+  display: flex;
+  justify-content: center;
+  margin-top: 1px;
+  font-size: 1.5rem;
+  color: #FFD700; 
+}
+
+.room-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto; 
+  max-height: 70%; 
+  padding-right: 40px; 
+}
+
+.room-info::-webkit-scrollbar {
+  height: 8px; 
+}
+
+.room-info::-webkit-scrollbar-thumb {
+  background: #ffa600;
+  border-radius: 8px; 
+}
+
+.room-info h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-top: 10px;
+}
+
+.room-info p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.room-info h4 {
+  font-size: 1.5rem;
+  color: #007bff;
+  margin-top: 20px;
+}
+
+.icon_close {
+  position: absolute;
+  top: 5px;
+  right: -7px;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #000000;
+  margin-right: 60px;
+}
+
+.icon_close:hover {
+  color: #fa0000;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 100px;
+}
+
+.form-row {
+  display: flex;
+  gap: 10px;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.booking-form label {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.booking-form input {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.booking-form button {
+  padding: 12px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #925f00;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.booking-form button:hover {
+  background-color: #3f2900;
+}
+
+.view-button {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  padding: 8px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: 0.3s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  background-color: #CC8C18;
+  color: white;
+  outline: none;
+  border: none;
+  right: 5%;
+  bottom: 8%;
+}
+
+.view-button:hover {
+  background-color: #653600;
+  color: white;
+}
+
+.box .view_button_availability {
+  margin-top: 55px;
+}
+
+.view_button_availability {
+  display: block;
+  justify-content: space-between;
+  font-size: 15px;
+  padding: 8px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: 0.3s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  background: #CC8C18;
+  color: white;
+  outline: none;
+  border: none;
+  margin: 0 auto;
+}
+
+.view_button_availability:hover {
+  background-color: #653600;
+  color: white;
+}
+
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pagination-controls button {
+  background-color: #b38300e8; 
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 5px;
+  margin-top: 50px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.pagination-controls button:hover {
+  background-color: #935d00; 
+  transform: scale(1.05); 
+}
+
+.pagination-controls button:disabled {
+  background-color: #cccccc; /* Disabled button color */
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.pagination-controls span {
+  font-size: 1rem;
+  margin: 0 10px;
+  color: #333333; /* Neutral color for text */
+}
+
+@media (max-width: 768px) {
+
+  .grid2 {
+    grid-template-columns: 1fr;
+  }
+
+  .left, .right {
+    width: 100%;
+    text-align: center;
+  }
+
+  .offer .right {
+    margin: 0;
+    padding: 10px;
+  }
+
+  .home .container{
+    max-width: 100%;
+    max-height: 100%;
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  .home .content.grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0px;
+  }
+
+  .home .box {
+    padding: 15px;
+    justify-content: center;
+  }
+
+  .view-button{
+    margin-left: 55px;
+  }
+
+  .view_button_availability{
+    width: 120%;
+    max-width: 200px;
+    padding: 10px;
+    margin-left: 90px;
+  }
+}
