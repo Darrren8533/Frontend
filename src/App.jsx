@@ -8,7 +8,7 @@ import About_Sarawak from './Pages/customer/About_Sarawak/about_sarawak';
 import Product from './Pages/customer/Product/product';
 import Cart from './Pages/customer/Cart/cart';
 import Support from './Pages/customer/Support/Support';
-import About_Us from './Pages/customer/About_Us/About_Us';
+import About_Us from './Pages/customer/About_us/About_Us';
 import NoAccess from './Component/NoAccess/NoAccess';
 
 //Import React router dom
