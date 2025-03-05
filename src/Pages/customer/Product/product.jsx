@@ -7,7 +7,7 @@ import Navbar from '../../../Component/Navbar/navbar';
 import Footer from '../../../Component/Footer/footer';
 
 // Import Api
-import { fetchProduct, createReservation, requestBooking } from '../../../../../Backend/Api/api';
+import { fetchProduct, createReservation, requestBooking } from '../../../../Api/api';
 
 // Import React Icon and CSS
 import { IoIosCloseCircleOutline } from "react-icons/io";

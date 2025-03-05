@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from '../../../Component/Navbar/navbar';
 import Footer from '../../../Component/Footer/footer';
-import { fetchCart, removeReservation, updateReservationStatus } from '../../../../../Backend/Api/api';
+import { fetchCart, removeReservation, updateReservationStatus } from '../../../../Api/api';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import './cart.css';
 
