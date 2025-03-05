@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { propertiesListing, updateProperty, propertyListingRequest } from "../../../../Api/api";
+import { propertiesListing, updateProperty, propertyListingRequest } from "../../../Api/api";
 import Toast from "../Toast/Toast";
 import "./PropertyForm.css";
 
