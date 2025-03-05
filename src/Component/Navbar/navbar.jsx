@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { FaUserCircle, FaBars } from "react-icons/fa";
-import { logoutUser } from '../../../../Backend/Api/api';
+import { logoutUser } from '../../../../Api/api';
 import './navbar.css';
 
 function Navbar() {
